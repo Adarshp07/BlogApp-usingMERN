@@ -1,0 +1,30 @@
+{
+  "name": "blogapp-usingmern",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "script": "node server.js",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Adarshp07/BlogApp-usingMERN.git"
+  },
+  "author": "Adarsh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Adarshp07/BlogApp-usingMERN/issues"
+  },
+  "homepage": "https://github.com/Adarshp07/BlogApp-usingMERN#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^7.4.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.0.1"
+  }
+}
