@@ -9,9 +9,13 @@ const connectDB = require('./config/connectDB');
 // .env
 dotenv.config();
 
+//router import
+const userRoutes = require("./routes/userRoutes");
+
 
 // mongodb connection
-connectDB()
+connectDB();
+
 // rest object
 const app = express();
 //middlewares
@@ -21,13 +25,13 @@ app.use(express.json());
 app.use(morgan("dev"));
 
 //routes
-app.get('/', (req, res) => {
-    res.status(200).send({
-        "message": "Namaskar World"
-    }
-    )
-})
+app.use("/api/v1/user", userRoutes);
 
-app.listen(8000, () => {
-    console.log("Server is running on 8000".bgCyan.white)
-})
+
+//PORT
+const PORT = process.env.PORT || 8080;
+
+// listen
+app.listen(PORT, () => {
+    console.log("Server is running on 8080".bgCyan.white);
+});
